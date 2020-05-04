@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupVC" customModule="OnisPos" customModuleProvider="target">
+            <connections>
+                <outlet property="tableMain" destination="hFV-5j-W8V" id="FpJ-0l-gfz"/>
+                <outlet property="txtSearch" destination="aQc-Ma-HhO" id="T2s-nY-yZE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Хайх утгаа оруулна уу" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aQc-Ma-HhO">
+                    <rect key="frame" x="15" y="59" width="384" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="G8g-SD-l4m"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="txtSearch_changed:" destination="-1" eventType="editingChanged" id="huJ-Bk-gOS"/>
+                    </connections>
+                </textField>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hFV-5j-W8V">
+                    <rect key="frame" x="15" y="119" width="384" height="728"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aQc-Ma-HhO" secondAttribute="trailing" constant="15" id="Hy4-Ye-jFA"/>
+                <constraint firstItem="hFV-5j-W8V" firstAttribute="top" secondItem="aQc-Ma-HhO" secondAttribute="bottom" constant="15" id="Ygn-iv-cve"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hFV-5j-W8V" secondAttribute="bottom" constant="15" id="bNw-Dy-WFm"/>
+                <constraint firstItem="aQc-Ma-HhO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="fOA-1z-ZWh"/>
+                <constraint firstItem="aQc-Ma-HhO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="gwT-nc-ols"/>
+                <constraint firstItem="hFV-5j-W8V" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="r4l-GQ-XaL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hFV-5j-W8V" secondAttribute="trailing" constant="15" id="wfa-CY-VzO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </view>
+    </objects>
+</document>

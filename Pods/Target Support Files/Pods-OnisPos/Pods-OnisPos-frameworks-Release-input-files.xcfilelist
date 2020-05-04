@@ -1,0 +1,9 @@
+${PODS_ROOT}/Target Support Files/Pods-OnisPos/Pods-OnisPos-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/CarbonKit/CarbonKit.framework
+${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework
+${BUILT_PRODUCTS_DIR}/MZAppearance/MZAppearance.framework
+${BUILT_PRODUCTS_DIR}/MZFormSheetPresentationController/MZFormSheetPresentationController.framework
+${BUILT_PRODUCTS_DIR}/Printer/Printer.framework
+${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework
+${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
