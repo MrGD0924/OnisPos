@@ -285,6 +285,7 @@ class SalePopupVC: UIViewController, CBCentralManagerDelegate, CBPeripheralDeleg
         ticket.feedLinesOnHead = 2
         ticket.feedLinesOnTail = 1
         
+        
         bluetoothPrinterManager.print(ticket)
         dummyPrinter.print(ticket)
     }

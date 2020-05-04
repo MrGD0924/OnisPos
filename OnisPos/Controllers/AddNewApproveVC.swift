@@ -52,6 +52,7 @@ class AddNewApproveVC: UIViewController {
         setBorderText2(txtAddress)
         
         txtPhone.text = phonenum
+        txtRegnum.text = regnum
         
         if newStoreInfo != nil {
             setData()
