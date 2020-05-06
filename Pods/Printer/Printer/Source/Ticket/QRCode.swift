@@ -25,6 +25,7 @@ struct QRCode: BlockDataProvider {
                            ESC_POSCommand.QRGetReadyToStore(text: content)))
         
         if let cd = content.data(using: encoding) {
+            print("sDA")
             result.append(cd)
         }
         

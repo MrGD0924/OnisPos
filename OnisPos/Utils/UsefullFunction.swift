@@ -109,11 +109,17 @@ func mzFormFactory(viewController: UIViewController, size: CGSize) -> MZFormShee
 }
 
 func numberFormat(number: Double) -> String{
-    return NumberFormatter.localizedString(from: NSNumber(value: number), number: NumberFormatter.Style.decimal)
+    let formater = NumberFormatter()
+    formater.groupingSeparator = ","
+    formater.numberStyle = .decimal
+    return formater.string(from: NSNumber(value: number))!
 }
 
 func numberFormat2(number: Int) -> String{
-    return NumberFormatter.localizedString(from: NSNumber(value: number), number: NumberFormatter.Style.decimal)
+    let formater = NumberFormatter()
+    formater.groupingSeparator = ","
+    formater.numberStyle = .decimal
+    return formater.string(from: NSNumber(value: number))!
 }
 
 func stringNumber(value: String) -> String{

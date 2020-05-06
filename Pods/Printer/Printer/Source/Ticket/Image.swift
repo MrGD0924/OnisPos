@@ -16,8 +16,8 @@ extension Image {
     
     var ticketData: Data? {
         
-        let width = ticketImage.width
-        let height = ticketImage.height
+        let width = 128
+        let height = 128
         
         if let grayData = convertImageToGray(ticketImage) {
             // get binary data
@@ -38,8 +38,8 @@ extension Image {
         let colors: Int = kGreen | kBlue | kRed
         
         let colorSpace       = CGColorSpaceCreateDeviceRGB()
-        let width            = inputCGImage.width
-        let height           = inputCGImage.height
+        let width            = 128
+        let height           = 128
         let bytesPerPixel    = 4
         let bitsPerComponent = 8
         let bytesPerRow      = bytesPerPixel * width

@@ -19,9 +19,11 @@ class NetworkingClient {
     
     func executePost(_suburl: String, parameters: Parameters, completion: @escaping WebServiceResponce) {
         guard let url = URL(string: BASE_URL + _suburl) else { return }
-        
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 30
+
         let headers = getHeaders()
-        Alamofire.request(url,method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON{ response in
+        manager.request(url,method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON{ response in
             print(response)
             switch response.result {
                 case .failure(let error):
@@ -37,10 +39,11 @@ class NetworkingClient {
     
     func executePut(_suburl: String, parameters: Parameters, completion: @escaping WebServiceResponce) {
         guard let url = URL(string: BASE_URL + _suburl) else { return }
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 30
         
         let headers = getHeaders()
-        
-        Alamofire.request(url,method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON{ response in
+        manager.request(url,method: .put, parameters: parameters, encoding: JSONEncoding.default, headers: headers).validate().responseJSON{ response in
             print(response)
             switch response.result {
             case .failure(let error):
@@ -56,6 +59,8 @@ class NetworkingClient {
     
     func executeGet(_suburl: String, parameters: Parameters, completion: @escaping WebServiceResponce) {
         guard let url = URL(string: BASE_URL + _suburl) else { return }
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 30
         
         let headers = getHeaders()
         
@@ -75,6 +80,8 @@ class NetworkingClient {
     
     func executeDelete(_suburl: String, parameters: Parameters, completion: @escaping WebServiceResponce) {
         guard let url = URL(string: BASE_URL + _suburl) else { return }
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = 30
         
         let headers = getHeaders()
         

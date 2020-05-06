@@ -279,6 +279,9 @@ class SalePopupVC: UIViewController, CBCentralManagerDelegate, CBPeripheralDeleg
             ticket.add(block: Block(Text(content: "Сугалааны дугаар: " + lottery, predefined: .alignment(.center))))
             ticket.add(block: .blank)
         }
+        
+//        let qrCode = convertImageQR(qrdata)
+//        ticket.add(block: .image(qrCode!, attributes: TicketImage.PredefinedAttribute.alignment(.center)))
         ticket.add(block: .qr(qrdata))
         ticket.add(block: .blank)
         
@@ -288,6 +291,23 @@ class SalePopupVC: UIViewController, CBCentralManagerDelegate, CBPeripheralDeleg
         
         bluetoothPrinterManager.print(ticket)
         dummyPrinter.print(ticket)
+    }
+    
+    func convertImageQR(_ qr: String) -> UIImage? {
+       let data = qr.data(using: String.Encoding.ascii)
+        // Get a QR CIFilter
+        guard let qrFilter = CIFilter(name: "CIQRCodeGenerator") else { return nil}
+        // Input the data
+        qrFilter.setValue(data, forKey: "inputMessage")
+        // Get the output image
+        guard let qrImage = qrFilter.outputImage else { return nil}
+        // Scale the image
+        let transform = CGAffineTransform(scaleX: 2, y: 2)
+        let scaledQrImage = qrImage.transformed(by: transform)
+        // Do some processing to get the UIImage
+        let context = CIContext()
+        guard let cgImage = context.createCGImage(scaledQrImage, from: scaledQrImage.extent) else { return nil}
+        return UIImage(cgImage: cgImage)
     }
     
     func okAction(title: String, message: String){

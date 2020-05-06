@@ -119,12 +119,13 @@ extension ESC_POSCommand {
     }
     
     static func QRGetReadyToStore(text: String) -> ESC_POSCommand {
-        
+        //String(data: data, encoding: .windowsCP1250)
         let s  = text.count + 3
         let pl = s % 256
         let ph = s / 256
         
-        return ESC_POSCommand([29, 40, 107, UInt8(pl), UInt8(ph), 49, 80, 48])
+        let bit = [29, 40, 107, UInt8(pl), UInt8(ph), 49, 80, 48]
+        return ESC_POSCommand(bit)
     }
     
     static func QRPrint() -> ESC_POSCommand {
