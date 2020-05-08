@@ -30,7 +30,9 @@ class ForgetPassVC: UIViewController {
     @IBAction func btnOk(_ sender: UIButton) {
         if txtRegnum.text!.count == 7 || txtRegnum.text!.count == 10 {
             SVProgressHUD.show(withStatus: "Түр хүлээнэ үү...")
-            networkingClient.executePost(_suburl: API_GET_ALL_USER + txtRegnum.text!, parameters: [:]) { (json, error) in
+            
+            let reg = String(utf8String: txtRegnum.text!.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)
+            networkingClient.executePost(_suburl: API_GET_ALL_USER + reg!, parameters: [:]) { (json, error) in
                SVProgressHUD.dismiss()
                if let error = error {
                    showAlertAction(view: self, title: "Анхаар", message: checkMessage(msg: error.localizedDescription))
@@ -66,6 +68,7 @@ class ForgetPassVC: UIViewController {
         }
     }
     @IBAction func txtChanging(_ sender: UITextField) {
+        txtRegnum.text = txtRegnum.text!.uppercased()
         checkMaxLength(textField: sender, maxLength: 10)
     }
     

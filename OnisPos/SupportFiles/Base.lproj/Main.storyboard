@@ -3438,8 +3438,8 @@
         <image name="y" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MeQ-EJ-b2o"/>
-        <segue reference="Mtw-aX-3t2"/>
+        <segue reference="woV-RX-9pl"/>
+        <segue reference="n92-Mk-jAV"/>
         <segue reference="hts-uR-Fwf"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.96862745100000003" green="0.63137254899999995" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>

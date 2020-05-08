@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewRequirementVC" customModule="Onis_Pos" customModuleProvider="target">
+            <connections>
+                <outlet property="btnYes" destination="TTh-0d-90u" id="m4g-ix-9lI"/>
+                <outlet property="chkOK" destination="Q0a-G6-Mpd" id="0FG-7h-lFQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdl-Eg-Qhr">
+                    <rect key="frame" x="15" y="59" width="384" height="400"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="8HB-l2-X6k"/>
+                    </constraints>
+                    <attributedString key="attributedText">
+                        <fragment>
+                            <mutableString key="content">НЭГ. НИЙТЛЭГ ҮНДЭСЛЭЛ
+         	1.1 Энэхүү үйлчилгээний нөхцөл нь “Оньс” гар утасны аппликейшнд хэрэглэгчээр бүртгүүлэх, аппликейшнийг ашиглаж борлуулалтын үйл ажиллагаа явуулахтай холбоотой үүсэх харилцааг зохицуулна.  	1.2 Энэхүү нөхцөл нь хэрэглэгч гар утасны аппликейшнд бүртгүүлж хэрэглэгч болохоос өмнө уншиж танилцан, хүлээн зөвшөөрч баталгаажуулсны үндсэн дээр хэрэгжиж эхэлнэ.  	1.3 Энэхүү нөхцөлийн хэрэгжилтийг “Оньс” гар утасны аппликейшнийг эзэмшигч болон хэрэглэгч хамтран хянана.   ХОЁР. ТАЛУУДЫН ЭРХ ҮҮРЭГ  	2.1 Энэхүү гар утасны аппликейшн нь компанийн өмч бөгөөд хэрэглэгч нь лого, нэр, загварыг хуулах, олшруулах, дуурайх, өөр бусад зорилгоор ашиглахыг хориглоно.  	2.2 Тус “Оньс” аппликейшн нь худалдаа, ажил  үйлчилгээ эрхлэгч болон хэрэглэгчдийн борлуулалт хийхэд зориулсан гар утасны аппликейшн байна.  	2.3 Гар утасны аппликейшнийн өгөгдөл хадгалалт, түүний аюулгүй байдал, хэрэглэгчийн мэдээллийн нууцлалыг компани бүрэн хариуцна.
+</mutableString>
+                            <attributes>
+                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                            </attributes>
+                        </fragment>
+                        <fragment>
+                            <mutableString key="content">
+	2.4 Гар утасны аппликейшнийн мэдээллийн шинэчлэлт, үнийн өөрчлөлт, хөнгөлөлт урамшуулал болон шинэ үйлчилгээний талаарх мэдээллийн үнэн зөвийг компани бүрэн хариуцна.  	2.5 Хэрэглэгч нь гуравдагч этгээдэд нэвтрэх дугаар, нууц үгээ дамжуулахгүй байх, аппликейшнаар нэвтрэн орсон үедээ гар утсаа хэн нэгэнд дамжуулахгүй байх, аппликейшн ашиглаагүй үедээ програмаас байнга гарч байх зэргээр өөрийн мэдээллийн аюулгүй байдлыг өөрөө хариуцна.
+
+	2.6 Хэрэглэгч сайн дураар “Оньс” аппликейшнд мэдээллээ бүртгүүлэх бөгөөд мэдээллийн үнэн зөв байдалд хэрэглэгч өөрөө бүрэн хариуцлага хүлээнэ.  	2.7 Компани нь Хууль хяналтын байгууллагын албан ёсны шаардлагаас бусад ямар ч нөхцөлд хэрэглэгчийн оруулсан мэдээллийн нууцыг бусдад дамжуулахгүй чандлан хадгалах бөгөөд зөвхөн хэрэглэгчтэй байгуулсан үйлчилгээний нөхцөлөөр буюу хэрэглэгчийн хүсэлтэнд хариулах, холбоо барихад ашиглана.  	2.8 Хэрэглэгчийн бүртгүүлсэн регистрийн дугаараар НӨАТУС-д борлуулалтын мэдээллийг хуульд заасны дагуу илгээх үүрэгтэй.
+  ГУРАВ. ГИШҮҮНЧЛЭЛ  	3.1 Хэрэглэгч нь “Оньс” аппликейшнд бүртгүүлж хэрэглэгч болсноор “Оньс”-д өөрийн эрхээрээ нэвтрэх эрхтэй болно. 	 	3.2 Хэрэглэгч “Оньс” аппликейшнд бүртгүүлэхдээ татвар төлөгчийн регистрийн дугаар, и-мэйл хаяг, нууц үгийг заавал оруулна.  	3.3 Хэрэглэгчийн и-мэйл хаягаар шаардлагатай мэдээллийг илгээх тул нэг и-мэйл хаягаар нэгээс олон хэрэглэгч бүртгүүлэх боломжгүй.  	3.4 Хэрэглэгч бүртгүүлсний дараа лицензийн төлбөрөө төлснөөр бүртгэлээ баталгаажуулах бөгөөд албан ёсны хэрэглэгч болно.  	3.5 Хэрэглэгч худал мэдээлэл оруулах, үүргээ биелүүлээгүй зэрэг үйлдэл гаргавал тухайн гишүүний эрхийг хаана.   ДӨРӨВ. ТӨЛБӨР  	4.1 “Оньс” гар утасны аппликейшнийн сарын төлбөр нь 5000 төгрөг, өдрийн төлбөр 200 төгрөг байна. 
+	4.2  Хэрэглэгч нь лицензийн төлбөрөө ХААН банкны 5038060153 тоот дансанд тушаах бөгөөд гүйлгээний утга хэсэгт өөрийн нэвтрэх дугаарыг заавал бичнэ.Нэвтрэх дугаарыг буруу бичсэн эсвэл огт бичээгүйгээс үүдэн гарах асуудлыг хэрэглэгч өөрөө хариуцна.
+
+	4.3 Хэрэглэгчийн лицензийн хугацаа дууссан тохиолдолд борлуулалт хийх эрх нь хаагдах бөгөөд лицензийн төлбөрөө төлснөөр эрх нь сунгагдана.
+
+	4.4 Хэрэглэгч лицензийн төлбөрөө төлснөөс хойш 2 цагийн дотор програмын лицензийн хугацаа сунгагдана.
+
+
+ТАВ. БУСАД ЗҮЙЛ
+
+	5.1 Компани нь үйлчилгээний нөхцөлд өөрчлөлт оруулах эрхтэй бөгөөд хэрэглэгч нь үйлчилгээний нөхцөлийн сүүлийн хувилбарыг уншиж байх үүрэгтэй.
+
+	5.2 Хэрэглэгчийн мэдээлэл болон төлбөрийн талаар асуудал үүссэн тохиолдолд 90090889 утсанд холбогдож лавлана.
+
+	5.3 Хэрэглэгчийн гаргасан гомдол, маргаантай асуудлыг тус гар утасны аппликейшний үйлчилгээний нөхцөл болон Монгол улсын хууль дүрмийн дагуу шийдвэрлэнэ.</mutableString>
+                            <attributes>
+                                <color key="NSColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <font key="NSFont" size="16" name=".AppleSystemUIFont"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nlt-wv-l1a">
+                    <rect key="frame" x="87" y="467" width="240" height="40"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Q0a-G6-Mpd">
+                            <rect key="frame" x="8" y="8" width="51" height="31"/>
+                            <color key="onTintColor" red="0.96862745100000003" green="0.63137254899999995" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="chk_check:" destination="-1" eventType="valueChanged" id="L4g-Tt-eCh"/>
+                            </connections>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ЗӨВШӨӨРЧ БАЙНА" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IxN-z6-xCX">
+                            <rect key="frame" x="65" y="13" width="160" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Q0a-G6-Mpd" firstAttribute="leading" secondItem="nlt-wv-l1a" secondAttribute="leading" constant="8" id="6d6-Kf-TUs"/>
+                        <constraint firstItem="IxN-z6-xCX" firstAttribute="top" secondItem="nlt-wv-l1a" secondAttribute="top" constant="13" id="7Bk-8k-cIq"/>
+                        <constraint firstItem="IxN-z6-xCX" firstAttribute="leading" secondItem="Q0a-G6-Mpd" secondAttribute="trailing" constant="8" id="9hj-lH-5Z8"/>
+                        <constraint firstItem="Q0a-G6-Mpd" firstAttribute="top" secondItem="nlt-wv-l1a" secondAttribute="top" constant="8" id="FYj-RH-00u"/>
+                        <constraint firstAttribute="width" constant="240" id="WnA-rP-z8t"/>
+                        <constraint firstAttribute="height" constant="40" id="a6E-QR-L3a"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TTh-0d-90u">
+                    <rect key="frame" x="0.0" y="515" width="414" height="45"/>
+                    <color key="backgroundColor" red="0.35294117650000001" green="0.35294117650000001" blue="0.35294117650000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="n9V-gO-n1c"/>
+                    </constraints>
+                    <state key="normal" title="ЗӨВШӨӨРӨХ">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btn_OK:" destination="-1" eventType="touchUpInside" id="eyz-ee-3QJ"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wdl-Eg-Qhr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="15" id="3X2-Zd-6rj"/>
+                <constraint firstItem="TTh-0d-90u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="9dD-1n-B7O"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TTh-0d-90u" secondAttribute="trailing" id="GS8-1S-LQt"/>
+                <constraint firstItem="wdl-Eg-Qhr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="bgX-T2-nne"/>
+                <constraint firstItem="nlt-wv-l1a" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eCe-ng-BfH"/>
+                <constraint firstItem="nlt-wv-l1a" firstAttribute="top" secondItem="wdl-Eg-Qhr" secondAttribute="bottom" constant="8" id="fRF-t0-HXj"/>
+                <constraint firstItem="TTh-0d-90u" firstAttribute="top" secondItem="nlt-wv-l1a" secondAttribute="bottom" constant="8" id="hHj-tc-oIH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wdl-Eg-Qhr" secondAttribute="trailing" constant="15" id="sh7-50-q0u"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </view>
+    </objects>
+</document>

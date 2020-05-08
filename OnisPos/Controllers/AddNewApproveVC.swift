@@ -105,7 +105,18 @@ class AddNewApproveVC: UIViewController {
              return
          }
         
-         let parameters: Parameters = [
+        let vc = NewRequirementVC(nibName: "NewRequirementVC", bundle: nil)
+        vc.returnOk =  {
+            self.SendNewUser()
+        }
+        let form = mzFormFactory(viewController: vc, size: CGSize(width: 350, height: 516))
+        self.present(form, animated: true, completion: nil)
+        
+         //SendNewUser()
+    }
+    
+    func SendNewUser() {
+        let parameters: Parameters = [
              "storename": txtStorename.text!,
              "regnum": txtRegnum.text!,
              "ownername": txtOwner.text!,
