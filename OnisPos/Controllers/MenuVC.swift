@@ -87,7 +87,9 @@ class MenuVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 self.performSegue(withIdentifier: "segueSettings", sender: self)
                 break
             case 4:
-                self.performSegue(withIdentifier: "segueLicence", sender: self)
+                if userName != "demo"{
+                    self.performSegue(withIdentifier: "segueLicence", sender: self)
+                }
                 break
             case 5:
                 self.performSegue(withIdentifier: "segueAbout", sender: self)

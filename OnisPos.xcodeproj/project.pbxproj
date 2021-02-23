@@ -639,7 +639,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 2.3;
+				MARKETING_VERSION = 2.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.datacare.onis;
 				PRODUCT_NAME = "Onis Pos";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
@@ -667,7 +667,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 2.3;
+				MARKETING_VERSION = 2.7;
 				PRODUCT_BUNDLE_IDENTIFIER = com.datacare.onis;
 				PRODUCT_NAME = "Onis Pos";
 				SWIFT_OBJC_BRIDGING_HEADER = "";

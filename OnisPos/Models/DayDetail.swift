@@ -10,10 +10,12 @@ struct DayDetail{
     var slsnum: String?
     var slstime: String?
     var amount: Int?
+    var custemail: String?
     
-    init(_ slsnum: String?,_ slstime: String?,_ amount: Int?){
+    init(_ slsnum: String?,_ slstime: String?,_ amount: Int?,_ custemail: String?){
         self.slsnum = slsnum
         self.slstime = slstime
         self.amount = amount
+        self.custemail = custemail
     }
 }

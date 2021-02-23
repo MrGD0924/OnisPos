@@ -26,6 +26,7 @@ class ReportDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     var selectedMonth: String?
     var selectedTag = -1
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -150,6 +151,7 @@ class ReportDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             var time = self.listMain[indexPath.section].listData![dataIndex].slstime!
             cell.lblSlstime.text = time.substring(with:11..<16)
             cell.lblAmount.text = numberFormat2(number: self.listMain[indexPath.section].listData![dataIndex].amount!)
+            cell.lblEmail.text = self.listMain[indexPath.section].listData![dataIndex].custemail!
             return cell
         }
     }
@@ -181,7 +183,7 @@ class ReportDayVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
                                     let data = json["value"].array
                                     var list:[DayDetail] = []
                                     data?.forEach({ (row) in
-                                        let item = DayDetail(row["slsnum"].stringValue, row["slstime"].stringValue, row["amount"].int)
+                                        let item = DayDetail(row["slsnum"].stringValue, row["slstime"].stringValue, row["amount"].int, row["custemail"].stringValue)
                                         list.append(item)
                                     })
                                     self.listMain[indexPath.section].listData = list

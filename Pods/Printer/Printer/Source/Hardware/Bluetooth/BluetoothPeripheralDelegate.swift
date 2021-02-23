@@ -67,7 +67,7 @@ class BluetoothPeripheralDelegate: NSObject, CBPeripheralDelegate {
     }
 
     public func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
-
+        print("hahaha")
         print(characteristic)
     }
 }

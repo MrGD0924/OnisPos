@@ -21,8 +21,10 @@ public class BluetoothPrinterSelectTableViewController: UITableViewController {
 
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
+        dataSource.removeAll()
         dataSource = printerManager?.nearbyPrinters ?? []
         printerManager?.delegate = self
+        tableView.reloadData()
         
         let button = UIButton()
         button.frame = CGRect(x: 0, y: self.view.frame.size.height - 200, width: self.view.frame.size.width, height: 200)
@@ -57,9 +59,9 @@ public class BluetoothPrinterSelectTableViewController: UITableViewController {
         guard indexPath.row < dataSource.count else {
             return cell
         }
-
+        
         let printer = dataSource[indexPath.row]
-
+        
         cell.textLabel?.text = printer.name ?? "unknow"
         cell.accessoryType = printer.state == .connected ? .checkmark : .none
         

@@ -21,7 +21,7 @@ struct QRCode: BlockDataProvider {
         
         result.append(Data(esc_pos: ESC_POSCommand.justification(1),
                            ESC_POSCommand.QRSetSize(point: 6),
-                           //ESC_POSCommand.QRSetRecoveryLevel(),
+                           ESC_POSCommand.QRSetRecoveryLevel(),
                            ESC_POSCommand.QRGetReadyToStore(text: content)))
         
         if let cd = content.data(using: encoding) {

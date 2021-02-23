@@ -2093,11 +2093,19 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRG-70-m4h" userLabel="Lbl Email">
+                                                    <rect key="frame" x="35" y="41" width="37.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Xaj-TT-MZu" firstAttribute="top" secondItem="8mE-lY-4sk" secondAttribute="topMargin" constant="4" id="Atp-bB-cXf"/>
+                                                <constraint firstItem="uRG-70-m4h" firstAttribute="leading" secondItem="8mE-lY-4sk" secondAttribute="leading" constant="35" id="Byy-kZ-C8w"/>
                                                 <constraint firstItem="tso-8x-sU6" firstAttribute="leading" secondItem="Xaj-TT-MZu" secondAttribute="trailing" constant="8" id="FEG-Yq-MA5"/>
                                                 <constraint firstItem="Xaj-TT-MZu" firstAttribute="leading" secondItem="8mE-lY-4sk" secondAttribute="leadingMargin" constant="15" id="IEH-KV-j7l"/>
+                                                <constraint firstItem="uRG-70-m4h" firstAttribute="top" secondItem="Xaj-TT-MZu" secondAttribute="bottom" constant="8" id="dI4-gk-Y5P"/>
                                                 <constraint firstItem="tso-8x-sU6" firstAttribute="top" secondItem="8mE-lY-4sk" secondAttribute="topMargin" constant="4" id="hf5-wS-SGg"/>
                                                 <constraint firstItem="HE6-hi-hdb" firstAttribute="top" secondItem="8mE-lY-4sk" secondAttribute="topMargin" constant="4" id="ww7-hn-8Vk"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="HE6-hi-hdb" secondAttribute="trailing" constant="15" id="yCp-Bf-jFN"/>
@@ -2105,6 +2113,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="lblAmount" destination="HE6-hi-hdb" id="1gs-c8-qcn"/>
+                                            <outlet property="lblEmail" destination="uRG-70-m4h" id="Qha-cb-GWR"/>
                                             <outlet property="lblSlsnum" destination="Xaj-TT-MZu" id="Tzl-3j-ZGn"/>
                                             <outlet property="lblSlstime" destination="tso-8x-sU6" id="fiR-H1-c9c"/>
                                         </connections>

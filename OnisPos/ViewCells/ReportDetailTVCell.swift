@@ -13,6 +13,7 @@ class ReportDetailTVCell: UITableViewCell {
     @IBOutlet weak var lblSlsnum: UILabel!
     @IBOutlet weak var lblSlstime: UILabel!
     @IBOutlet weak var lblAmount: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

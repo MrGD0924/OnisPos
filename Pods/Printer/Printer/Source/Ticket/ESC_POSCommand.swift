@@ -115,7 +115,7 @@ extension ESC_POSCommand {
     }
     
     static func QRSetRecoveryLevel() -> ESC_POSCommand {
-        return  ESC_POSCommand(rawValue: [29, 40, 107, 3, 0, 49, 69, 51])
+        return  ESC_POSCommand(rawValue: [29, 40, 107, 3, 0, 49, 69, 49])
     }
     
     static func QRGetReadyToStore(text: String) -> ESC_POSCommand {

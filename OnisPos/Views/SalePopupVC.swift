@@ -143,18 +143,8 @@ class SalePopupVC: UIViewController, CBCentralManagerDelegate, CBPeripheralDeleg
                 }
             }
         }
-        
         manager = CBCentralManager(delegate: self, queue: nil, options: nil)
         manager.delegate = self
-        
-        
-        if bluetoothPrinterManager.canPrint {
-            Send(true)
-        }
-        else {
-            connectPrint!()
-            dismiss(animated: true, completion: nil)
-        }
     }
     
     func checkRegnum() {
@@ -264,10 +254,10 @@ class SalePopupVC: UIViewController, CBCentralManagerDelegate, CBPeripheralDeleg
         ticket.add(block: .dividing)
         var row1 = " Барааны vнэ :"
         var row2 = " НQАТ :"
-        
+
         row1 = row1.padding(toLength: 15, withPad: " ", startingAt: 0)
         row2 = row2.padding(toLength: 15, withPad: " ", startingAt: 0)
-        
+
         let row11 = billAmount.leftPadding(toLength: 13, withPad: " ", count: billAmount.count)
         let row22 = vat.leftPadding(toLength: 13, withPad: " ", count: vat.count)
 
@@ -279,35 +269,19 @@ class SalePopupVC: UIViewController, CBCentralManagerDelegate, CBPeripheralDeleg
             ticket.add(block: Block(Text(content: "Сугалааны дугаар: " + lottery, predefined: .alignment(.center))))
             ticket.add(block: .blank)
         }
-        
+
 //        let qrCode = convertImageQR(qrdata)
 //        ticket.add(block: .image(qrCode!, attributes: TicketImage.PredefinedAttribute.alignment(.center)))
+        ticket.add(block: .blank(2))
         ticket.add(block: .qr(qrdata))
         ticket.add(block: .blank)
-        
-        ticket.feedLinesOnHead = 2
+
+        ticket.feedLinesOnHead = 1
         ticket.feedLinesOnTail = 1
         
         
         bluetoothPrinterManager.print(ticket)
         dummyPrinter.print(ticket)
-    }
-    
-    func convertImageQR(_ qr: String) -> UIImage? {
-       let data = qr.data(using: String.Encoding.ascii)
-        // Get a QR CIFilter
-        guard let qrFilter = CIFilter(name: "CIQRCodeGenerator") else { return nil}
-        // Input the data
-        qrFilter.setValue(data, forKey: "inputMessage")
-        // Get the output image
-        guard let qrImage = qrFilter.outputImage else { return nil}
-        // Scale the image
-        let transform = CGAffineTransform(scaleX: 2, y: 2)
-        let scaledQrImage = qrImage.transformed(by: transform)
-        // Do some processing to get the UIImage
-        let context = CIContext()
-        guard let cgImage = context.createCGImage(scaledQrImage, from: scaledQrImage.extent) else { return nil}
-        return UIImage(cgImage: cgImage)
     }
     
     func okAction(title: String, message: String){
@@ -342,7 +316,25 @@ class SalePopupVC: UIViewController, CBCentralManagerDelegate, CBPeripheralDeleg
         }
 
         if !message.isEmpty{
-            UIAlertView( title: "Bluetooth тохиргоо", message: message, delegate: nil, cancelButtonTitle: "OK").show()
+            showAlertAction(view: self, title: "Bluetooth тохиргоо", message: message)
+            return
+        }
+        else {
+
+            let error = bluetoothPrinterManager.startScan()
+            if error == nil {
+                if bluetoothPrinterManager.canPrint {
+                    Send(true)
+                }
+                else {
+                    connectPrint!()
+                    dismiss(animated: true, completion: nil)
+                }
+            }
+            else {
+                connectPrint!()
+                dismiss(animated: true, completion: nil)
+            }
         }
     }
 }

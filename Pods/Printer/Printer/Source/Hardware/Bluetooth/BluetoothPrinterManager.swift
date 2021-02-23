@@ -86,6 +86,7 @@ public class BluetoothPrinterManager {
 
     private let centralManagerDelegate = BluetoothCentralManagerDelegate(BluetoothPrinterManager.specifiedServices)
     private let peripheralDelegate = BluetoothPeripheralDelegate(BluetoothPrinterManager.specifiedServices, characteristics: BluetoothPrinterManager.specifiedCharacteristics)
+    
 
     weak var delegate: PrinterManagerDelegate?
 
@@ -197,6 +198,9 @@ public class BluetoothPrinterManager {
             return .deviceNotReady
         }
 
+        if centralManager.state == .unauthorized || centralManager.state == .unknown || centralManager.state == .unsupported {
+            return .connectFailed
+        }
         let serviceUUIDs = BluetoothPrinterManager.specifiedServices.map { CBUUID(string: $0) }
         centralManager.scanForPeripherals(withServices: serviceUUIDs, options: nil)
 
@@ -267,7 +271,7 @@ public class BluetoothPrinterManager {
     }
 
     public var canPrint: Bool {
-        if peripheralDelegate.writablecharacteristic == nil || peripheralDelegate.writablePeripheral == nil {
+        if peripheralDelegate.writablecharacteristic == nil || peripheralDelegate.writablePeripheral == nil{
             return false
         } else {
             return true
@@ -283,8 +287,20 @@ public class BluetoothPrinterManager {
         }
 
         for data in content.data(using: encoding) {
-
-            p.writeValue(data, for: c, type: .withoutResponse)
+            let byteArrayFromData: [UInt8] = [UInt8](data)
+            if(byteArrayFromData.count > 125){
+                let s = byteArrayFromData.count / 125;
+                for n in 0...s{
+                    var next = (n+1)*125
+                    if(next > byteArrayFromData.count){
+                        next = byteArrayFromData.count
+                    }
+                    p.writeValue(data[n*125..<next], for: c, type: .withoutResponse)
+                }
+            }else{
+                p.writeValue(data, for: c, type: .withoutResponse)
+            }
+            //p.writeValue(data, for: c, type: .withoutResponse)
         }
 
         completeBlock?(nil)
